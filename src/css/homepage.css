@@ -1,0 +1,23 @@
+html, body {
+    padding: 0; margin: 0;
+
+}
+
+.x {
+    display: flex;
+    flex-direction: column;
+    margin: .65rem .65rem 0 ;
+}
+
+
+
+.header {
+    border-style: solid;
+    border-color: black;
+    height: 2.5rem;
+}
+
+
+.sloganWrap {
+    text-align: center;
+}
