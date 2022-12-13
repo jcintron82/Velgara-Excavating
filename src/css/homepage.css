@@ -112,13 +112,19 @@ li {
     flex-direction: column;
     margin: 0 1.25rem;
     padding-top: 2.5rem;
+    position: relative;
 }
 
 .aboutUsBtnWrapImg {
     padding-bottom: 2.5rem;
+    height: auto;
 }
 .aboutUsBtn {
-    width: 7.5rem;
-    align-self: center;
+    width: 50%;
+    max-width: 20rem;
+    height: 2rem;
+    position: absolute;
+    left: 45%;
+    top:80%;
 }
 
