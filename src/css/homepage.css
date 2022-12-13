@@ -66,7 +66,7 @@ img:nth-child(1){
     margin: 0 1.25rem;
     display: flex;
     justify-content: center;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
 }
 
 .homepageBtns {
@@ -74,24 +74,32 @@ img:nth-child(1){
     height: 2.25rem;
 }
 .homepageBtns:nth-child(1) {
-    color: red;
+    background-color: #F9D05F;
+    color: #1B1725;
+    border-style: none;
+}
+.homepageBtns:nth-child(2) {
+    background-color: #1A1A1B;
+    color: white;
+    border-style: none;
 }
 
 ul {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     list-style-type: none;
     padding-left: 0;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
     
 }
 
 li {
-    min-width: 5rem;
-    padding: .2rem;
-    padding: .8rem;
+    width: 25%;
+    padding: 1rem 2rem 2rem;
     font-size: 1.5em;
+    text-align: center;
 }
 
 
@@ -100,6 +108,8 @@ li {
 }
 
 .aboutUsBtnWrap {
+    display: flex;
+    flex-direction: column;
     margin: 0 1.25rem;
     padding-top: 2.5rem;
 }
@@ -107,3 +117,8 @@ li {
 .aboutUsBtnWrapImg {
     padding-bottom: 2.5rem;
 }
+.aboutUsBtn {
+    width: 7.5rem;
+    align-self: center;
+}
+
