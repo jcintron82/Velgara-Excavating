@@ -1,7 +1,28 @@
 const x = document.getElementById('aboutUsImgtext');
-const options ={ 
+const counters = document.querySelectorAll('.counter');
+// const speed = 300;
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = 1;
+        if(count < target) {
+            counter.innerText = (count + increment)
+            setTimeout(updateCount, 40)
+        } else {
+            count.innerText = target;
+        }
+
+    }
+
+    updateCount();
+})
+
+
+const observerOptions ={ 
     root:null,
-    threshold: 1.0,
+    threshold: .7,
     
 }
 
@@ -12,7 +33,7 @@ const observer = new IntersectionObserver((entries, observer ) => {
         
     })
    }
- , options)
+ , observerOptions)
 
  observer.observe(x)
 
