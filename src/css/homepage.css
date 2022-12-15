@@ -1,6 +1,6 @@
 html, body {
     padding: 0; margin: 0;
-    background-color: #1A1A1B;
+    background-color: #f0f0f0
     color:#d7dadc;
 }
 
@@ -18,7 +18,6 @@ body {
     flex-direction: column;
     margin: .65rem .65rem 0 ;
 }
-
 
 
 .header {
@@ -106,7 +105,10 @@ li {
 .tileDescriptions {
     font-size: .6em;
 }
-
+@keyframes expand {
+    0%{opacity: 0;}
+    100%{opacity: 1;;}
+}
 .aboutUsBtnWrap {
     display: flex;
     flex-direction: column;
@@ -115,10 +117,31 @@ li {
     position: relative;
 }
 
-.aboutUsBtnWrapImg {
+
+ .aboutUsBtnWrapScroll {
+       animation: expand 3s;
+    /* height: 10rem;
     padding-bottom: 2.5rem;
-    height: auto;
+    opacity: 1; */
 }
+
+ .aboutUsBtnWrapImg {
+        /* height: 10rem; */
+        padding-bottom: 2.5rem;
+        opacity: 1;
+    
+    }
+
+.aboutUsImgText {
+    opacity: 0;
+    width: 80%;
+    max-width: 20rem;
+    position: absolute;
+    background-color: transparent;
+    font-family: 'Dela Gothic One', sans-serif;
+
+}
+
 .aboutUsBtn {
     width: 50%;
     max-width: 20rem;
@@ -126,5 +149,6 @@ li {
     position: absolute;
     left: 45%;
     top:80%;
+    background-color: #ff5a00;;
 }
 
