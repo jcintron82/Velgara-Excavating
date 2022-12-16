@@ -2,27 +2,28 @@ const x = document.getElementById('aboutUsImgtext');
 const counters = document.querySelectorAll('.counter');
 // const speed = 300;
 
-counters.forEach(counter => {
+
+ const func = () => counters.forEach(counter => {
     const updateCount = () => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
         const increment = 1;
         if(count < target) {
             counter.innerText = (count + increment)
-            setTimeout(updateCount, 40)
+            setTimeout(updateCount, 100)
         } else {
             count.innerText = target;
         }
-
+        
     }
-
     updateCount();
+    
 })
 
 
 const observerOptions ={ 
     root:null,
-    threshold: .7,
+    threshold: 1.0,
     
 }
 
@@ -35,49 +36,25 @@ const observer = new IntersectionObserver((entries, observer ) => {
    }
  , observerOptions)
 
- observer.observe(x)
+ observer.observe(x);
 
-
-
-
-
-
-
-// const options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 1.0
-// }
-
-// const observer = new IntersectionObserver(handleIntersect, options)
-// function handleIntersect(entries, observer) {
-//     entries.forEach((entry) => {
-//       if (entry.intersectionRatio > prevRatio) {
-//         entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
-//       } else {
-//         entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
-//       }
-  
-//       prevRatio = entry.intersectionRatio;
-//     });
-//   }
-
-// observer.observe(aboutUsWrapImg)
-
-// const scrollListener = (err, e) => {
-//     if (err) throw err;
-//     const screenTop = document.scrollingElement.scrollTop;
-//     const screenBottom = screenTop + innerHeight;
-//     const elementTop = aboutUsWrapImg.getBoundingClientRect().top
-
-//     if (elementTop < screenBottom && elementTop < screenTop) {
-//         aboutUsBtnWrap.className =('hide');
+//  Function which adds clasS(opacity) and other CSS styles when element is in view
+const numcountObserver = new IntersectionObserver((entries, numcountObserver ) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+        entry.target.innerText = 0;
+        console.log(entry.target)
+        entry.target.classList.toggle('aboutUsBtnWrapScroll');
+        func();
+        numcountObserver.unobserve(entry.target);}
+    })
     
-     
-//     }
-// }
+   }
+ , observerOptions)
+
+
+ 
 
 
 
-// document.onscroll = scrollListener
-// observer()
+ counters.forEach(counters => numcountObserver.observe(counters))
