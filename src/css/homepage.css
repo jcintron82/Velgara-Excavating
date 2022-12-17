@@ -3,7 +3,7 @@ html, body {
     background-color: #f0f0f0;
 }
 
-body {
+.body {
     display: flex;
     flex-direction: column;
 
@@ -125,7 +125,7 @@ li {
        animation-fill-mode: forwards; 
        opacity: 1;
        position: relative;
-   
+       color: black;
 }
 
  .aboutUsBtnWrapImg {
