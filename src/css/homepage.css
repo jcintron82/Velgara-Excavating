@@ -1,8 +1,11 @@
 html, body {
     padding: 0; margin: 0;
     background-color: #f0f0f0;
-}
 
+}
+html {
+    scroll-behavior: smooth;
+}
 .body {
     display: flex;
     flex-direction: column;
@@ -53,13 +56,18 @@ img:nth-child(1){
     align-self: flex-start;
 }
 .sloganWrap {
-  width: 9rem;
+  min-width: 90%;
   display: flex;
   justify-content: flex-start;
   align-self: flex-start;
   padding-top: 1rem;
+  font-size: 1.5em;
+  letter-spacing: -.022px;
 }
 
+.period {
+    color: red;
+}
 .btnsWrap {
     margin: 0 1.25rem;
     display: flex;
@@ -70,6 +78,7 @@ img:nth-child(1){
 .homepageBtns {
     width: 50%;
     height: 2.25rem;
+    font-weight: 600;
 }
 .homepageBtns:nth-child(1) {
     background-color: #F9D05F;
@@ -87,6 +96,7 @@ ul {
     flex-flow: column wrap;
     list-style-type: none;
     padding-left: 0;
+    padding-top: 5rem;
     width: 100%;
     align-self: center;
     align-items: center;
@@ -95,10 +105,17 @@ ul {
 
 li {
     width: 25%;
-    padding: 1rem 2rem 7.5rem;
+    height: 15rem;
     font-size: 1.5em;
     text-align: center;
 }
+
+.counter {
+    font-weight: bold;
+    letter-spacing: .01rem;
+    padding-bottom: .25rem;
+}
+
 
 
 .tileDescriptions {
@@ -115,13 +132,13 @@ li {
     display: flex;
     flex-direction: column;
     margin: 0 1.25rem;
-    padding: 2.5rem 0;
+   
     position: relative;
 }
 
 
  .aboutUsBtnWrapScroll {
-       animation: expand 3s;
+       animation: expand 2s;
        animation-fill-mode: forwards; 
        opacity: 1;
        position: relative;
@@ -129,7 +146,7 @@ li {
 }
 
  .aboutUsBtnWrapImg {
-        /* height: 10rem; */
+        height: 12rem;
         /* padding-bottom: 2.5rem; */
         opacity: 1;
     
@@ -142,6 +159,7 @@ li {
     position: relative;
     background-color: transparent;
     font-family: 'Dela Gothic One', sans-serif;
+    font-size: 1.25em;
 
 }
 
