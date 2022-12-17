@@ -1,7 +1,19 @@
-const x = document.getElementById('aboutUsImgtext');
+const  x= document.getElementById('aboutUsImgtext');
 const counters = document.querySelectorAll('.counter');
+const img = document.querySelector('abousUsWrapImg')
 // const speed = 300;
 
+const observerOptionsNumbers ={ 
+    root:null,
+    threshold: 1.0
+    
+}
+const observerOptionsAboutUs ={ 
+    threshold: .1,
+    rootMargin: '-10px 0px -0px 0px'
+ 
+
+}
 
  const func = () => counters.forEach(counter => {
     const updateCount = () => {
@@ -20,41 +32,32 @@ const counters = document.querySelectorAll('.counter');
     
 })
 
-
-const observerOptions ={ 
-    root:null,
-    threshold: 1.0,
-    
-}
-
-const observer = new IntersectionObserver((entries, observer ) => {
-    entries.forEach(entry => {
-        console.log(entry.target)
-        entry.target.classList.toggle('aboutUsBtnWrapScroll')
-        
-    })
-   }
- , observerOptions)
-
- observer.observe(x);
-
 //  Function which adds clasS(opacity) and other CSS styles when element is in view
 const numcountObserver = new IntersectionObserver((entries, numcountObserver ) => {
     entries.forEach(entry => {
         if (entry.isIntersecting){
         entry.target.innerText = 0;
         console.log(entry.target)
-        entry.target.classList.toggle('aboutUsBtnWrapScroll');
+        // entry.target.classList.toggle('aboutUsBtnWrapScroll');
         func();
         numcountObserver.unobserve(entry.target);}
     })
     
    }
- , observerOptions)
+ , observerOptionsNumbers)
 
+ counters.forEach(counters => numcountObserver.observe(counters));
 
- 
+ //Observer for the image at the bottom of the homepage
+ const observer = new IntersectionObserver((entries, observer ) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+        console.log(entry.target)
+        entry.target.classList.toggle('aboutUsBtnWrapScroll')}
+        // entry.target.className = 'aboutUsBtnWrapScroll' }
+    
+    })
+   }
+ , observerOptionsAboutUs)
 
-
-
- counters.forEach(counters => numcountObserver.observe(counters))
+ observer.observe(x);

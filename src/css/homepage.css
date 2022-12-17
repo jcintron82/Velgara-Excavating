@@ -1,7 +1,6 @@
 html, body {
     padding: 0; margin: 0;
-    background-color: #f0f0f0
-    color:#d7dadc;
+    background-color: #f0f0f0;
 }
 
 body {
@@ -85,18 +84,18 @@ img:nth-child(1){
 
 ul {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     list-style-type: none;
     padding-left: 0;
     width: 100%;
     align-self: center;
-    justify-content: center;
+    align-items: center;
     
 }
 
 li {
     width: 25%;
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 2rem 7.5rem;
     font-size: 1.5em;
     text-align: center;
 }
@@ -106,28 +105,32 @@ li {
     font-size: .6em;
 }
 @keyframes expand {
-    0%{opacity: 0;}
-    100%{opacity: 1;;}
+    0%{opacity: 0;
+        bottom: 10rem
+    }
+    100%{opacity: 1;
+        bottom: 19rem}
 }
 .aboutUsBtnWrap {
     display: flex;
     flex-direction: column;
     margin: 0 1.25rem;
-    padding-top: 2.5rem;
+    padding: 2.5rem 0;
     position: relative;
 }
 
 
  .aboutUsBtnWrapScroll {
        animation: expand 3s;
-    /* height: 10rem;
-    padding-bottom: 2.5rem;
-    opacity: 1; */
+       animation-fill-mode: forwards; 
+       opacity: 1;
+       position: relative;
+   
 }
 
  .aboutUsBtnWrapImg {
         /* height: 10rem; */
-        padding-bottom: 2.5rem;
+        /* padding-bottom: 2.5rem; */
         opacity: 1;
     
     }
@@ -136,11 +139,12 @@ li {
     opacity: 0;
     width: 80%;
     max-width: 20rem;
-    position: absolute;
+    position: relative;
     background-color: transparent;
     font-family: 'Dela Gothic One', sans-serif;
 
 }
+
 
 .aboutUsBtn {
     width: 50%;
@@ -148,7 +152,12 @@ li {
     height: 2rem;
     position: absolute;
     left: 45%;
-    top:80%;
-    background-color: #ff5a00;;
+    top:70%;
+    background-color: #ff5a00;
 }
 
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */
