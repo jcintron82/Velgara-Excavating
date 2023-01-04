@@ -1,0 +1,58 @@
+html{
+    scroll-behavior: smooth
+}
+.counter{
+    font-size: 2em;
+}
+.counter2{
+    font-size: 2em;
+}
+.headerslogan {
+    padding-top: 0;
+    color: black;
+    padding-bottom: 1rem;
+}
+.headerTitle{
+    margin-bottom: 0;
+    padding-bottom:0;
+    margin-bottom: 18rem;
+    border-style: solid;
+    border-color: transparent;
+    color: black;
+
+    
+}
+.bannerarrow{
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-size: 1.5em
+}
+.quotebox{
+    background-color: black;
+    color: white;
+    padding: 0 .55rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .5em;
+    font-weight: 600;
+    
+}
+.quotebox:hover{
+    opacity: .7;
+}
+.grassnote{
+    font-size: .85em;
+}
+.infinitysymbol{
+    min-width: 55px;
+    height: 40vh;
+}
+.upbtn{
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    ;
+}
+@media
