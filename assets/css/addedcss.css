@@ -67,6 +67,14 @@ html{
 .quotebox:active,  .contactbtn:hover{
     background-color: lightgray;
 }
+.x{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}  
+.thirdCounterTitleWrap{
+    color: white;
+} 
 @media(min-width: 1024px){
     .quotebox:hover, .upbtn:hover{
         opacity: .5;

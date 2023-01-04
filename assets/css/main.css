@@ -3397,6 +3397,7 @@ input, select, textarea {
 		#banner .inner {
 			margin: 0 auto;
 			width: 55em;
+			
 		}
 
 		#banner .logo {
@@ -3437,7 +3438,7 @@ input, select, textarea {
 			-moz-transition-delay: 0.65s;
 			-webkit-transition-delay: 0.65s;
 			-ms-transition-delay: 0.65s;
-			transition-delay: 0.65s;
+			transition-delay: .05s;
 			-moz-filter: blur(0);
 			-webkit-filter: blur(0);
 			-ms-filter: blur(0);
