@@ -11,16 +11,23 @@ html{
     padding-top: 0;
     color: black;
     padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: 44em;
+    border-style: none;
 }
 .headerTitle{
     margin-bottom: 0;
     padding-bottom:0;
-    margin-bottom: 15rem;
+    margin-bottom: 50vh;
     border-style: solid;
     border-color: transparent;
     color: black;
-
-    
+    font-size: 44em;
+     border-style: none;
+}
+.headerSloganSpans{
+    font-weight: 300;
+    font-family: 'Gothic A1', sans-serif;;
 }
 .bannerarrow{
     width: 100%;
@@ -84,5 +91,15 @@ html{
     }
     .upbtn{
         top: 90vh;
+    }
+}
+@media(min-width: 1750px){
+    .headerTitle{
+        margin-bottom: 70vh;
+    }
+}
+@media(min-width: 2500px){
+    .headerTitle{
+        margin-bottom: 100vh;
     }
 }
