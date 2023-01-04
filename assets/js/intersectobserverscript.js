@@ -59,7 +59,7 @@ const numcountObserver = new IntersectionObserver((entries, numcountObserver ) =
         // entry.target.classList.toggle('aboutUsBtnWrapScroll');
         func()
         numcountObserver.unobserve(entry.target);
-            }, 500);
+            }, 300);
         }
       
     })
@@ -76,7 +76,7 @@ const numcountObserver = new IntersectionObserver((entries, numcountObserver ) =
         // entry.target.classList.toggle('aboutUsBtnWrapScroll');
         secondNum()
         numcountObserver.unobserve(entry.target);
-            }, 500);
+            }, 300);
         }
       
     })
