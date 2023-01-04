@@ -15,7 +15,7 @@ html{
 .headerTitle{
     margin-bottom: 0;
     padding-bottom:0;
-    margin-bottom: 18rem;
+    margin-bottom: 15rem;
     border-style: solid;
     border-color: transparent;
     color: black;
@@ -37,10 +37,8 @@ html{
     display: inline-block;
     font-size: .5em;
     font-weight: 600;
+    border-radius: 3px;
     
-}
-.quotebox:hover{
-    opacity: .7;
 }
 .grassnote{
     font-size: .85em;
@@ -51,8 +49,22 @@ html{
 }
 .upbtn{
     position: fixed;
-    top: 100px;
-    right: 20px;
-    ;
+    top: 90vh;
+    right: 5vw;
+    width: 55px;
+    height: 55px;
+    /* border-radius: 50%;
+    background-color: lightblue; */;
+    border-style: none;
+} 
+.quotebox:active,  .contactbtn:hover{
+    background-color: lightgray;
 }
-@media
+@media(min-width: 1024px){
+    .quotebox:hover, .upbtn:hover{
+        opacity: .5;
+    }
+    .contactbtn:hover{
+        opacity: .9;
+    }
+}
