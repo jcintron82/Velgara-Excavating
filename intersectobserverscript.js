@@ -6,7 +6,8 @@ const img = document.querySelector('abousUsWrapImg')
 
 const observerOptionsNumbers ={ 
     root:null,
-    threshold: 1.0
+    threshold: 1.0,
+    // root:document.getElementById('familyimg')
     
 }
 const observerOptionsAboutUs ={ 
@@ -56,29 +57,46 @@ const numcountObserver = new IntersectionObserver((entries, numcountObserver ) =
                 entry.target.innerText = 0;
         console.log(entry.target)
         // entry.target.classList.toggle('aboutUsBtnWrapScroll');
-        func();
-        secondNum();
+        func()
         numcountObserver.unobserve(entry.target);
             }, 1000);
         }
+      
+    })
+    
+   }
+ , observerOptionsNumbers)
+
+ const secondNumObserver = new IntersectionObserver((entries, numcountObserver ) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+            setTimeout(() => {
+                entry.target.innerText = 0;
+        console.log(entry.target)
+        // entry.target.classList.toggle('aboutUsBtnWrapScroll');
+        secondNum()
+        numcountObserver.unobserve(entry.target);
+            }, 1000);
+        }
+      
     })
     
    }
  , observerOptionsNumbers)
 
  counters.forEach(counters => numcountObserver.observe(counters));
- counter2.forEach(counter2 => numcountObserver.observe(counter2));
+ counter2.forEach(counter2 => secondNumObserver.observe(counter2));
 
  //Observer for the image at the bottom of the homepage
- const observer = new IntersectionObserver((entries, observer ) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting){
-        console.log(entry.target)
-        entry.target.classList.toggle('aboutUsBtnWrapScroll')}
-        // entry.target.className = 'aboutUsBtnWrapScroll' }
+//  const observer = new IntersectionObserver((entries, observer ) => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting){
+//         console.log(entry.target)
+//         entry.target.classList.toggle('aboutUsBtnWrapScroll')}
+//         // entry.target.className = 'aboutUsBtnWrapScroll' }
     
-    })
-   }
- , observerOptionsAboutUs)
+//     })
+//    }
+//  , observerOptionsAboutUs)
 
- observer.observe(x);
+//  observer.observe(x);

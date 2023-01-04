@@ -49,16 +49,20 @@ html{
 }
 .upbtn{
     position: fixed;
-    top: 93.5vh;
+    top: 95vh;
     right: 5vw;
     /* border-radius: 50%;
     background-color: lightblue; */;
+    border-style: solid;
+    border-color: transparent;
 } 
 .upSVG{
     width: 40px;
     height: 40px;
     background-color: black;
     border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
 }
 .quotebox:active,  .contactbtn:hover{
     background-color: lightgray;
@@ -69,5 +73,8 @@ html{
     }
     .contactbtn:hover{
         opacity: .9;
+    }
+    .upbtn{
+        top: 90vh;
     }
 }
