@@ -1,4 +1,4 @@
-**Velgara Excavating** 
+# **Velgara Excavating** 
 
 A landing and contact page for a Pennsylvania based excavating company. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
