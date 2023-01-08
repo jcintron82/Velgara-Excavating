@@ -2669,7 +2669,8 @@ input, select, textarea {
 
 	ul.contact {
 		list-style: none;
-		padding: 0;
+		padding: 0rem 0 2rem;
+		
 	}
 
 		ul.contact li {
@@ -4021,7 +4022,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer .inner {
-		padding: 5em 0 3em 0 ;
+		padding: 5em 0 2em 0 ;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -4036,6 +4037,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		margin: 0 auto;
 		width: 55em;
+		height: 100vh;
 	}
 
 		#footer .inner > * {
